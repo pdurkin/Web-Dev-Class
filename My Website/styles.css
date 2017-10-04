@@ -1,0 +1,56 @@
+body {
+	color: white;
+	background: #293344;
+	font-family: 'Source Sans Pro';
+}
+
+header {
+	margin: 5px auto;
+	/*max-width: 700px;*/
+	width: 80%;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 60px;
+	margin: 5px auto;
+}
+
+a {
+	color: #f92665; 
+}
+
+hr {
+	width: 80%;
+}
+
+#container {
+	margin: 5px auto;
+	/*max-width: 700px;*/
+	width: 80%;
+	padding: 20px;
+}
+
+#about {
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+#about p {
+	margin-top: 0;
+}
+
+#contact {
+	font-size: 20px;
+}
+
+.quote {
+    font-family: 'PT Mono', monospace;
+	font-style: italic;
+	color: white;
+}
+
+.highlight {
+	color: #66d9ef;
+	font-style: inherit;
+}
