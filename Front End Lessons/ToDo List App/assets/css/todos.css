@@ -1,0 +1,84 @@
+body {
+	font-family: Roboto;
+	background: #649173;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #DBD5A4, #649173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal; /* h1 font is bolded by default */
+}
+
+span {
+	background: #e74c3c;
+	height: 40px;
+	width: 0;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0; /* neccesary to hide the icons when not hovered */
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
+}
+
+ul {
+	list-style: none; /* Removes the bullet points from the ul */
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	background: white;
+	height: 40px;
+	line-height: 40px; /* centers text vertically */
+	color: #666;
+}
+
+/* Select every other li */
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+
+input {
+	font-size: 18px;
+	color: #2980b9; /* font color */
+	background-color: #f7f7f7;
+	width: 100%; /* set the input box to go across the whole list */
+	padding: 13px 13px 13px 20px; /* top right bottom left */
+	box-sizing: border-box; /* the width and heigh properties now include the padding and border, but not the margin */
+	border: 3px solid rgba(0, 0, 0, 0); /* invisible border but takes out the default input box border */
+}
+
+input:focus{
+	background: white;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+#container {
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	width: 360px;
+	margin: 100px auto; /*Centers the container by setting the top and bottom margin to 100px, left and right to auto*/
+	background: #f7f7f7;
+}
+
+/*Checked off To-Dos*/
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+.fa-plus {
+	float: right;
+}

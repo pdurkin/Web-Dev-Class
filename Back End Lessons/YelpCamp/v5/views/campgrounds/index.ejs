@@ -1,0 +1,49 @@
+<!-- Add header -->
+<% include ../partials/header %>
+
+<!-- Bootstrap container -->
+<div class="container">
+     
+    <!-- Bootstrap jumbotron/header -->
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to YelpCamp!</h1>
+            <p>View our handpicked campgrounds from all over the world.</p>
+            <p>
+                <!-- Bootstrap classes btn: converts link to button format, btn-primary: formats the color (in this case making it blue) btn-lg: size of the button -->
+                <a class="btn btn-primary btn-lg" href=/campgrounds/new>Add New Campground</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Our Most Popular Campgrounds!</h3>
+        </div>
+    </div>
+    
+    <!-- style attributes will help our grid to compensate/react to images of varying heights/widths -->
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <!-- Display campgrounds -->
+        <% campgrounds.forEach(function(campground){ %>
+            <!-- Bootstrap column modifiers. Creates responsive sizing for the thumbnails. When window is md or larger creates 4 images per column, when at small, 2 -->
+            <div class="col-md-3 col-sm-6">
+                <!-- Camp Image -->
+                <div class="thumbnail">
+                    <img src="<%= campground.image %>">
+                    <div class="caption">
+                        <!-- Camp Name -->
+                        <h4><%= campground.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+    <a href="/">Return to Home page</a>
+</div>
+<!-- add footer -->
+<% include ../partials/footer %>

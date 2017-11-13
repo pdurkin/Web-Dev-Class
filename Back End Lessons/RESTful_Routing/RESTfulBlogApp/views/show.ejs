@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= blog.title %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= blog.image %>">
+            <div class="content">
+                <p><%= blog.created.toDateString() %></p>
+            </div>
+            <!-- Note here that the .ejs tag < %- will run the contents as code. E.g. if our blog.body has html in it (including a possible <script> tag, it will be run as code -->
+            <div class="description"><p><%- blog.body %></p></div>
+            
+            <!-- Edit Button -->
+            <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+            
+            <!-- Delete button. Note the id, which makes the form inline -->
+            <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
